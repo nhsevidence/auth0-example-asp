@@ -43,4 +43,5 @@ with the corresponding values found in the Auth0 application `Settings` tab:
 ## Resources
 
 [Auth0 ASP.NET (OWIN) MVC tutorial](https://auth0.com/docs/quickstart/webapp/aspnet-owin/01-login)
+
 [Auth0 ASP.NET (OWIN) MVC sample code](https://github.com/auth0-samples/auth0-aspnet-owin-mvc-samples)

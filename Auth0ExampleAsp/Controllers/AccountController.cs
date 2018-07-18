@@ -1,7 +1,9 @@
-﻿using System.Web;
+﻿using System.Security.Claims;
+using System.Web;
 using System.Web.Mvc;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
+using MvcApplication.ViewModels;
 
 namespace MvcApplication.Controllers
 {
@@ -26,6 +28,25 @@ namespace MvcApplication.Controllers
 
         [Authorize]
         public ActionResult Claims()
+        {
+            return View();
+        }
+        
+        [Authorize]
+        public ActionResult UserProfile()
+        {
+            ClaimsIdentity claimsIdentity = User.Identity as ClaimsIdentity;
+
+            return View(new UserProfileViewModel()
+            {
+                Name = claimsIdentity?.FindFirst(c => c.Type == claimsIdentity.NameClaimType)?.Value,
+                EmailAddress = claimsIdentity?.FindFirst(c => c.Type == ClaimTypes.Email)?.Value,
+                ProfileImage = claimsIdentity?.FindFirst(c => c.Type == "picture")?.Value
+            });
+        }
+
+        [Authorize(Roles = "staff")]
+        public ActionResult Admin()
         {
             return View();
         }

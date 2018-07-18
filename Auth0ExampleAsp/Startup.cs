@@ -50,11 +50,12 @@ namespace MvcApplication
                 PostLogoutRedirectUri = auth0PostLogoutRedirectUri,
 
                 ResponseType = OpenIdConnectResponseType.CodeIdToken,
-                Scope = "openid profile",
+                Scope = "openid profile email",
 
                 TokenValidationParameters = new TokenValidationParameters
                 {
-                    NameClaimType = "name"
+                    NameClaimType = "name",
+                    RoleClaimType = "https://nice.org.uk/claims/roles"
                 },
 
                 Notifications = new OpenIdConnectAuthenticationNotifications
