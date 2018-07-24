@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace MvcApplication.Controllers
+namespace Auth0ExampleAsp.Controllers
 {
     public class HomeController : Controller
     {

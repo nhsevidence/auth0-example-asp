@@ -1,4 +1,4 @@
-﻿namespace MvcApplication.ViewModels
+﻿namespace Auth0ExampleAsp.ViewModels
 {
     public class UserProfileViewModel
     {

@@ -2,9 +2,9 @@
 using System.Web.Optimization;
 using System.Web.Routing;
 
-namespace MvcApplication
+namespace Auth0ExampleAsp
 {
-    public class MvcApplication : System.Web.HttpApplication
+    public class Auth0ExampleAsp : System.Web.HttpApplication
     {
         protected void Application_Start()
         {

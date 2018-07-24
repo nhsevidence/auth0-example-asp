@@ -1,6 +1,6 @@
 ﻿using System.Web.Optimization;
 
-namespace MvcApplication
+namespace Auth0ExampleAsp
 {
     public class BundleConfig
     {

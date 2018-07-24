@@ -1,11 +1,11 @@
 ﻿using System.Security.Claims;
 using System.Web;
 using System.Web.Mvc;
+using Auth0ExampleAsp.ViewModels;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
-using MvcApplication.ViewModels;
 
-namespace MvcApplication.Controllers
+namespace Auth0ExampleAsp.Controllers
 {
     public class AccountController : Controller
     {

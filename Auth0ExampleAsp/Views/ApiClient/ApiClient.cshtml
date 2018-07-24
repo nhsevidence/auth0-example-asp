@@ -1,0 +1,22 @@
+﻿<!-- Views/ApiCLient/ApiClient.cshtml -->
+
+@model global::Auth0ExampleAsp.ViewModels.ApiClientViewModel
+
+@{
+    ViewData["Title"] = "NICE API";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h3>@ViewData["Title"]</h3>
+        <p style="word-wrap: break-word;">Access Token: @Model.AccessToken</p>
+        <p style="word-wrap: break-word;">Token Type: @Model.TokenType</p>
+        <p style="word-wrap: break-word;">Expires In: @Model.ExpiresIn</p>
+        <p style="word-wrap: break-word;">Scope: @Model.Scope</p>
+        
+        @Html.Action("Public")
+        @Html.Action("Private")
+        @Html.Action("PrivateScoped")
+        @Html.Action("PrivateScopedOut")
+    </div>
+</div>

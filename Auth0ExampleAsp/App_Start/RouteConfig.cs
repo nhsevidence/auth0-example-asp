@@ -1,7 +1,7 @@
 ﻿using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace MvcApplication
+namespace Auth0ExampleAsp
 {
     public class RouteConfig
     {

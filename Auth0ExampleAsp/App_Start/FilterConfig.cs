@@ -1,6 +1,6 @@
 ﻿using System.Web.Mvc;
 
-namespace MvcApplication
+namespace Auth0ExampleAsp
 {
     public class FilterConfig
     {
