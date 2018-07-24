@@ -23,8 +23,7 @@ an Identity Platform / NICE Accounts replacement
 
 ## Set up
 
-- Make sure port `56572` is free
-
+### Auth0 setup
 - Create an [Auth0](auth0.com) account and add an example application 
 and example users
 
@@ -39,6 +38,15 @@ with the corresponding values found in the Auth0 application `Settings` tab:
     - Change the `auth0:Domain` value to the `Domain` setting value
     - Change the `auth0:ClientId` value to the `Client ID` setting value
     - Change the `auth0:ClientSecret` value to the `Client Secret` setting value
+
+- To test API authentication / integration run the [Web API example](https://github.com/nhsevidence/auth0-example-api)
+
+### Local setup
+- Make sure port `56572` is free
+- In IIS create an Application Pool (CLR v4) and add a site using `{app_directory}\Auth0ExampleAsp` as the content directory
+- Configure it to use `localhost` as hostname and `56572` as port
+- Open the app in Visual Studio (2015+) and build it
+- Go to `http://localhost:56572/` and see the menu at the top
 
 ## Resources
 
